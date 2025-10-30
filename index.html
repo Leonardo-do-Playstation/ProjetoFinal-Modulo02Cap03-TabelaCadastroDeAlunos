@@ -16,83 +16,114 @@
         </header>
     </section>
 
-    <main>
+    <main class="container">
         <section>
-            <div class="container">
-                <div class="mt-3">
-                    <h2 class="display-3">Formulário de Cadastro</h2>
+            <div class="mt-3">
+                <h2 class="display-4">Formulário de Cadastro:</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-11 offset-md-1 ps-md-5">
+                    <form id="studentForm">
+                        <div class="row mt-3 mb-3">
+                            <label for="inputNome" class="col-sm-2 col-form-label">Nome:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputNome" required>
+                            </div>
+                        </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-11 offset-md-1">
-                        <form>
-                            <div class="row mt-3 mb-3">
-                                <label for="inputNome" class="col-sm-2 col-form-label">Nome:</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputNome" required>
-                                </div>
-                            </div>
-                    </div>
-
-                    <div class="col-md-11 offset-md-1">
-                        <div class="row mb-3">
-                            <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail" required>
-                            </div>
+                <div class="col-md-11 offset-md-1 ps-md-5">
+                    <div class="row mb-3">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
+                        <div class="col-sm-5">
+                            <input type="email" class="form-control" id="inputEmail" required>
+                        </div>
+                        <label for="inputTelefone" class="col-sm-1 col-form-label">Telefone:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="inputTelefone" required>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-md-11 offset-md-1">
-                        <div class="row mb-3">
-                            <div class="col-sm-2">
-                                <label for="inputState" class="form-label">Curso:</label>
-                            </div>
-                            <div class="col-sm-5">
-                                <select id="inputState" class="form-select">
-                                    <option selected>Escolha:</option>
-                                    <option>Java</option>
-                                    <option>Angular</option>
-                                    <option>C#</option>
-                                    <option>Python</option>
-                                    <option>JavaScript</option>
-                                </select>
-                            </div>
+                <div class="col-md-11 offset-md-1 ps-md-5">
+                    <div class="row mb-3">
+                        <div class="col-sm-2">
+                            <label for="inputState" class="form-label">Curso:</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <select id="inputState" class="form-select" required>
+                                <option value="" selected>Escolha:</option>
+                                <option value="1">Java</option>
+                                <option value="2">Angular</option>
+                                <option value="3">C#</option>
+                                <option value="4">Python</option>
+                                <option value="5">JavaScript</option>
+                            </select>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="col-md-11 offset-md-1">
-                        <fieldset class="row mb-3">
-                            <legend class="col-form-label col-sm-2 pt-0">Turno:</legend>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                        value="option1" checked>
-                                    <label class="form-check-label" for="gridRadios1">
-                                        Manhã
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                        value="option2">
-                                    <label class="form-check-label" for="gridRadios2">
-                                        Tarde
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
-                                        value="option3">
-                                    <label class="form-check-label" for="gridRadios3">
-                                        Noite
-                                    </label>
-                                </div>
+                <div class="col-md-11 offset-md-1 ps-md-5">
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-2 pt-0">Turno:</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Manhã
+                                </label>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Tarde
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                    value="option3">
+                                <label class="form-check-label" for="gridRadios3">
+                                    Noite
+                                </label>
+                            </div>
+                        </div>
 
-                        </fieldset>
-                        <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
-                    </div>
-                    </form>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+                </div>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <hr>
+        </section>
+
+        <section>
+            <div class="display-4 ">
+                Alunos Cadastrados:
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-11 offset-md-1 mt-1 ps-md-5">
+                    <table class="table" id="studentsTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Curso</th>
+                                <th scope="col">Turno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
