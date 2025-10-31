@@ -18,19 +18,36 @@ var turns = [
 
 loadStudents();
 
-function loadStudents(){
-    for (let stud of students){
+function loadStudents() {
+    for (let stud of students) {
         addNewRow(stud);
     }
 }
 
-function addNewRow(stud){
+
+function save() {
+    var stud = {
+        id: students.length + 1,
+        name: document.getElementById("inputName").value,
+        email: document.getElementById("inputEmail").value,
+        phone: document.getElementById("inputPhone").value,
+        curse: document.getElementById("inputCurse").value,
+        turn: document.querySelector('input[name="gridRadios"]:checked').value
+    };
+
+    addNewRow(stud);
+    students.push(stud);
+    document.getElementById("studentForm").reset();
+}
+
+
+function addNewRow(stud) {
     var table = document.getElementById("studentsTable");
     var newRow = table.insertRow();
 
     var idNode = document.createTextNode(stud.id);
     newRow.insertCell().appendChild(idNode);
-       
+
     var nameNode = document.createTextNode(stud.name);
     newRow.insertCell().appendChild(nameNode);
 
@@ -38,7 +55,7 @@ function addNewRow(stud){
     newRow.insertCell().appendChild(emailNode);
 
     var phoneNode = document.createTextNode(stud.phone);
-    newRow.insertCell().appendChild(phoneNode);     
+    newRow.insertCell().appendChild(phoneNode);
 
     var curseNode = document.createTextNode(curses[stud.curse - 1].name);
     newRow.insertCell().appendChild(curseNode);
@@ -47,4 +64,3 @@ function addNewRow(stud){
     newRow.insertCell().appendChild(turnNode);
 
 }
-
