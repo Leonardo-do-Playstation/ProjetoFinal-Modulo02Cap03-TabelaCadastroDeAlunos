@@ -52,15 +52,23 @@ function addNewRow(stud) {
     newRow.insertCell().appendChild(nameNode);
 
     var emailNode = document.createTextNode(stud.email);
-    newRow.insertCell().appendChild(emailNode);
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(emailNode);
 
     var phoneNode = document.createTextNode(stud.phone);
-    newRow.insertCell().appendChild(phoneNode);
+    var cell2 = newRow.insertCell();
+    cell2.className = "d-none d-md-table-cell";
+    cell2.appendChild(phoneNode);
 
     var curseNode = document.createTextNode(curses[stud.curse - 1].name);
-    newRow.insertCell().appendChild(curseNode);
+    var cell3 = newRow.insertCell();
+    cell3.className = "d-none d-md-table-cell";
+    cell3.appendChild(curseNode);
 
     var turnNode = document.createTextNode(turns[stud.turn - 1].name);
-    newRow.insertCell().appendChild(turnNode);
+    var cell4 = newRow.insertCell();
+    cell4.className = "d-none d-md-table-cell";
+    cell4.appendChild(turnNode);
 
 }
